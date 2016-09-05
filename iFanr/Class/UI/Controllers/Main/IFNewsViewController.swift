@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 class IFNewsViewController: UIViewController {
 
@@ -14,6 +15,45 @@ class IFNewsViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.blueColor()
+        
+        let provider = MoyaProvider<RequestAPI>()
+        provider.request(RequestAPI.news_latest(1)) { (result) in
+            print(result)
+            switch result {
+                
+            case let .Success(response):
+                
+                do {
+                    let jsonDic = try response.mapJSON() as? NSDictionary
+                    
+                    let dataArray = jsonDic!["data"] as? NSArray
+                    if dataArray?.count > 0 {
+                    
+                    } else {
+                        print("没有数据了")
+                    }
+                    
+                    print(jsonDic)
+ 
+                } catch {
+                    print("出现异常")
+                }
+
+                
+                
+                
+            case let .Failure(error):
+                print(error)
+                
+//            case let .Success(response):
+                
+//                let json = try response.mapJSON() as? Dictionary<String, AnyObject>
+//                
+//            case .Failure(error):
+//                print(error)
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

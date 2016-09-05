@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1BCE2561D7676FA00878D8F /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */; };
+		A1C2243E1D7D03E000665206 /* IFNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2243D1D7D03E000665206 /* IFNewsModel.swift */; };
 		A1EBBE571D755B920017FBEC /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */; };
 		A1EBBE5C1D755C2E0017FBEC /* IFStartVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */; };
 		A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		210ED941185AC6DD9215EAC5 /* Pods-iFanr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFanr.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFanr/Pods-iFanr.release.xcconfig"; sourceTree = "<group>"; };
 		485E20FE760E707CA96D4C2C /* Pods_iFanr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFanr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		A1C2243D1D7D03E000665206 /* IFNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFNewsModel.swift; sourceTree = "<group>"; };
 		A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFStartVideoViewController.swift; sourceTree = "<group>"; };
 		A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFMainViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A1BCE2501D76732100878D8F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A1C2243C1D7D037E00665206 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2243D1D7D03E000665206 /* IFNewsModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		A1EBBE551D755B880017FBEC /* OpenLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +108,7 @@
 		A1EBBE581D755BAC0017FBEC /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A1EDE29A1D77C90D00F0FBA0 /* Model */,
 				A1EBBE591D755C100017FBEC /* Controllers */,
 			);
 			path = UI;
@@ -130,6 +151,14 @@
 				A1EBBE6F1D75919F0017FBEC /* RequestAPI.swift */,
 			);
 			path = Global;
+			sourceTree = "<group>";
+		};
+		A1EDE29A1D77C90D00F0FBA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1C2243C1D7D037E00665206 /* Main */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A1F568261D741D230045D082 = {
@@ -177,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				A1EBBE6A1D75679C0017FBEC /* Global */,
+				A1BCE2501D76732100878D8F /* Extension */,
 				A1EBBE581D755BAC0017FBEC /* UI */,
 			);
 			path = Class;
@@ -211,6 +241,7 @@
 		A1F568271D741D230045D082 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IF;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = LianLuo;
@@ -305,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1BCE2561D7676FA00878D8F /* NSDateExtension.swift in Sources */,
 				A1EBBE611D75649C0017FBEC /* IFNewsViewController.swift in Sources */,
 				A1EBBE5C1D755C2E0017FBEC /* IFStartVideoViewController.swift in Sources */,
 				A1EBBE651D7564DD0017FBEC /* IFPlayViewController.swift in Sources */,
@@ -314,6 +346,7 @@
 				A1EBBE631D7564AF0017FBEC /* IFHomePageViewController.swift in Sources */,
 				A1EBBE671D7565030017FBEC /* IFAppSoViewController.swift in Sources */,
 				A1EBBE6C1D7567AC0017FBEC /* Global.swift in Sources */,
+				A1C2243E1D7D03E000665206 /* IFNewsModel.swift in Sources */,
 				A1EBBE701D75919F0017FBEC /* RequestAPI.swift in Sources */,
 				A1EBBE691D7565180017FBEC /* IFStoreViewController.swift in Sources */,
 			);

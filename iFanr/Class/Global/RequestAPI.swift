@@ -10,6 +10,8 @@ import UIKit
 import Moya
 import Foundation
 
+let baseUrlString = "https://www.ifanr.com/api/v3.0/"
+
 public enum RequestAPI {
     case news_latest(Int)
 }
@@ -30,8 +32,8 @@ extension RequestAPI: TargetType {
     }
     
     /// 当前时间的时间戳
-    private  var timestamp: String {
-        return ""
+    private var timestamp: String {
+        return NSDate.getCurrentTimeStamp()
     }
     
     private var post_type: String {
@@ -51,7 +53,7 @@ extension RequestAPI: TargetType {
     
     //MARK: ---
     public var baseURL: NSURL {
-        return NSURL(string: "https://www.ifanr.com/api/v3.0/")!
+        return NSURL(string: baseUrlString)!
     }
     
     public var path: String {
@@ -65,7 +67,9 @@ extension RequestAPI: TargetType {
     public var parameters: [String: AnyObject]? {
         switch self {
         case let .news_latest(page):
-            return ["action": action, "appKey": appKey, "excerpt_length": excerpt_length, "sign": sign, "timestamp": timestamp, "page": page, "posts_per_page": posts_per_page, "post_type": post_type]
+            let params: [String: AnyObject] = ["action": action, "appKey": appKey, "excerpt_length": excerpt_length, "sign": sign, "timestamp": timestamp, "page": page, "posts_per_page": posts_per_page, "post_type": post_type]
+            getUrlString(baseUrlString, params: params)
+            return params
         }
     }
     
@@ -76,6 +80,30 @@ extension RequestAPI: TargetType {
     public var multipartBody: [MultipartFormData]? {
         return nil
     }
-
-
+    
+    
+    
+    /**
+     打印请求的URL
+     
+     - parameter baseUrlStr: baseUrl
+     - parameter params:     参数字典
+     */
+    func getUrlString(baseUrlStr: String, params: NSDictionary) {
+        var str = "?"
+        
+        for item in params {
+            str = str.stringByAppendingString(item.key as! String)
+            str = str.stringByAppendingString("=")
+            str = str.stringByAppendingString(String(item.value))
+            str = str.stringByAppendingString("&")
+        }
+        
+        //去掉最后一个“&”号
+        if str.isEmpty == false {
+            str = str.substringToIndex(str.endIndex.advancedBy(-1))
+        }
+        
+        print("请求的URL是：\(baseUrlString + str)")
+    }
 }
