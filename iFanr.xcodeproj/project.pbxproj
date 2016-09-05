@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A1BCE2561D7676FA00878D8F /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */; };
-		A1C2243E1D7D03E000665206 /* IFNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C2243D1D7D03E000665206 /* IFNewsModel.swift */; };
+		A1C224461D7D16A100665206 /* IFNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C224451D7D16A100665206 /* IFNewsModel.m */; };
 		A1EBBE571D755B920017FBEC /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */; };
 		A1EBBE5C1D755C2E0017FBEC /* IFStartVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */; };
 		A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */; };
@@ -19,6 +19,7 @@
 		A1EBBE691D7565180017FBEC /* IFStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE681D7565180017FBEC /* IFStoreViewController.swift */; };
 		A1EBBE6C1D7567AC0017FBEC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE6B1D7567AC0017FBEC /* Global.swift */; };
 		A1EBBE701D75919F0017FBEC /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE6F1D75919F0017FBEC /* RequestAPI.swift */; };
+		A1F1718E1D7D1F99007EC894 /* IFAuthorInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F1718D1D7D1F99007EC894 /* IFAuthorInfoModel.m */; };
 		A1F568331D741D230045D082 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F568321D741D230045D082 /* AppDelegate.swift */; };
 		A1F568381D741D240045D082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1F568361D741D240045D082 /* Main.storyboard */; };
 		A1F5683A1D741D240045D082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1F568391D741D240045D082 /* Assets.xcassets */; };
@@ -31,7 +32,8 @@
 		210ED941185AC6DD9215EAC5 /* Pods-iFanr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFanr.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFanr/Pods-iFanr.release.xcconfig"; sourceTree = "<group>"; };
 		485E20FE760E707CA96D4C2C /* Pods_iFanr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFanr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
-		A1C2243D1D7D03E000665206 /* IFNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFNewsModel.swift; sourceTree = "<group>"; };
+		A1C224441D7D16A100665206 /* IFNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFNewsModel.h; sourceTree = "<group>"; };
+		A1C224451D7D16A100665206 /* IFNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFNewsModel.m; sourceTree = "<group>"; };
 		A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFStartVideoViewController.swift; sourceTree = "<group>"; };
 		A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFMainViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +44,9 @@
 		A1EBBE681D7565180017FBEC /* IFStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFStoreViewController.swift; sourceTree = "<group>"; };
 		A1EBBE6B1D7567AC0017FBEC /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		A1EBBE6F1D75919F0017FBEC /* RequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
+		A1F1718C1D7D1F99007EC894 /* IFAuthorInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFAuthorInfoModel.h; sourceTree = "<group>"; };
+		A1F1718D1D7D1F99007EC894 /* IFAuthorInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFAuthorInfoModel.m; sourceTree = "<group>"; };
+		A1F171901D7D2281007EC894 /* iFanr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iFanr-Bridging-Header.h"; sourceTree = "<group>"; };
 		A1F5682F1D741D230045D082 /* iFanr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFanr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F568321D741D230045D082 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1F568371D741D240045D082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,9 +97,20 @@
 		A1C2243C1D7D037E00665206 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A1C2243D1D7D03E000665206 /* IFNewsModel.swift */,
+				A1C224431D7D167600665206 /* News */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A1C224431D7D167600665206 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A1C224441D7D16A100665206 /* IFNewsModel.h */,
+				A1C224451D7D16A100665206 /* IFNewsModel.m */,
+				A1F1718C1D7D1F99007EC894 /* IFAuthorInfoModel.h */,
+				A1F1718D1D7D1F99007EC894 /* IFAuthorInfoModel.m */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		A1EBBE551D755B880017FBEC /* OpenLib */ = {
@@ -186,6 +202,7 @@
 				A1EBBE551D755B880017FBEC /* OpenLib */,
 				A1F568471D74203E0045D082 /* Class */,
 				A1F568321D741D230045D082 /* AppDelegate.swift */,
+				A1F171901D7D2281007EC894 /* iFanr-Bridging-Header.h */,
 				A1F568361D741D240045D082 /* Main.storyboard */,
 				A1F568391D741D240045D082 /* Assets.xcassets */,
 				A1F5683B1D741D240045D082 /* LaunchScreen.storyboard */,
@@ -337,16 +354,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BCE2561D7676FA00878D8F /* NSDateExtension.swift in Sources */,
+				A1C224461D7D16A100665206 /* IFNewsModel.m in Sources */,
 				A1EBBE611D75649C0017FBEC /* IFNewsViewController.swift in Sources */,
 				A1EBBE5C1D755C2E0017FBEC /* IFStartVideoViewController.swift in Sources */,
 				A1EBBE651D7564DD0017FBEC /* IFPlayViewController.swift in Sources */,
 				A1EBBE571D755B920017FBEC /* CAPSPageMenu.swift in Sources */,
 				A1F568331D741D230045D082 /* AppDelegate.swift in Sources */,
+				A1F1718E1D7D1F99007EC894 /* IFAuthorInfoModel.m in Sources */,
 				A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */,
 				A1EBBE631D7564AF0017FBEC /* IFHomePageViewController.swift in Sources */,
 				A1EBBE671D7565030017FBEC /* IFAppSoViewController.swift in Sources */,
 				A1EBBE6C1D7567AC0017FBEC /* Global.swift in Sources */,
-				A1C2243E1D7D03E000665206 /* IFNewsModel.swift in Sources */,
 				A1EBBE701D75919F0017FBEC /* RequestAPI.swift in Sources */,
 				A1EBBE691D7565180017FBEC /* IFStoreViewController.swift in Sources */,
 			);
@@ -462,10 +480,13 @@
 			baseConfigurationReference = C258FE982C75007AD4C6FB75 /* Pods-iFanr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iFanr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lianluo.iFanr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iFanr/iFanr-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -474,10 +495,12 @@
 			baseConfigurationReference = 210ED941185AC6DD9215EAC5 /* Pods-iFanr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iFanr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lianluo.iFanr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iFanr/iFanr-Bridging-Header.h";
 			};
 			name = Release;
 		};

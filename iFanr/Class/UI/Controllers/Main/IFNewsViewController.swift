@@ -11,6 +11,8 @@ import Moya
 
 class IFNewsViewController: UIViewController {
 
+    var dataArray = [IFNewsModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,29 +20,26 @@ class IFNewsViewController: UIViewController {
         
         let provider = MoyaProvider<RequestAPI>()
         provider.request(RequestAPI.news_latest(1)) { (result) in
-            print(result)
+
             switch result {
-                
             case let .Success(response):
                 
                 do {
-                    let jsonDic = try response.mapJSON() as? NSDictionary
+                    let jsonDic = try response.mapJSON()
+                    print(jsonDic)
+                    let jsonDataArray = IFNewsModel.modelWithNewsRequest(jsonDic as! [NSObject : AnyObject]) as! [IFNewsModel]
+                    self.dataArray.appendContentsOf(jsonDataArray)
                     
-                    let dataArray = jsonDic!["data"] as? NSArray
-                    if dataArray?.count > 0 {
+                    if self.dataArray.count > 0 {
                     
                     } else {
                         print("没有数据了")
                     }
                     
-                    print(jsonDic)
- 
+                    print("NewsDataArray:\(self.dataArray[0].ID)")
                 } catch {
                     print("出现异常")
                 }
-
-                
-                
                 
             case let .Failure(error):
                 print(error)
