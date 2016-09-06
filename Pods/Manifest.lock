@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (3.4.2)
+  - EXTView (0.1.0)
   - Moya (7.0.0):
     - Moya/Core (= 7.0.0)
   - Moya/Core (7.0.0):
@@ -10,15 +11,17 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - EXTView
   - Moya
   - YYModel
 
 SPEC CHECKSUMS:
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
+  EXTView: db5ded8520d2023cadb1b9225fb1ad9406064f04
   Moya: f004b82418fb8165ee1fc9f86190db4b3611fda9
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: d3896bf55d3a0030b2c25220b492a579bd674742
+PODFILE CHECKSUM: f7ba7b07fd40f566147ac624004cf0d9ed2c156c
 
 COCOAPODS: 1.0.1

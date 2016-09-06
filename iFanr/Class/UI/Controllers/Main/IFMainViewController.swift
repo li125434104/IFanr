@@ -30,7 +30,7 @@ class IFMainViewController: UIViewController {
     func setUpMenu() {
         var controllerArray: [UIViewController] = []
         
-        let vc1 = IFNewsViewController()
+        let vc1 = self.loadVCFromSB("IFNewsViewController")
         vc1.title = "快讯"
         controllerArray.append(vc1)
         

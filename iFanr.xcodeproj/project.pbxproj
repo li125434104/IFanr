@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		A1BCE2561D7676FA00878D8F /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */; };
 		A1C224461D7D16A100665206 /* IFNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C224451D7D16A100665206 /* IFNewsModel.m */; };
+		A1D2F94B1D7E62CD002E9BBD /* IFBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F94A1D7E62CD002E9BBD /* IFBaseTableViewCell.swift */; };
+		A1D2F94D1D7E62EA002E9BBD /* IFNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F94C1D7E62EA002E9BBD /* IFNewsCell.swift */; };
+		A1D2F94F1D7E6B90002E9BBD /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F94E1D7E6B90002E9BBD /* ControllerExtension.swift */; };
+		A1D2F9511D7EA775002E9BBD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F9501D7EA775002E9BBD /* StringExtension.swift */; };
 		A1EBBE571D755B920017FBEC /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */; };
 		A1EBBE5C1D755C2E0017FBEC /* IFStartVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */; };
 		A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */; };
@@ -34,6 +38,10 @@
 		A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		A1C224441D7D16A100665206 /* IFNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFNewsModel.h; sourceTree = "<group>"; };
 		A1C224451D7D16A100665206 /* IFNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFNewsModel.m; sourceTree = "<group>"; };
+		A1D2F94A1D7E62CD002E9BBD /* IFBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFBaseTableViewCell.swift; sourceTree = "<group>"; };
+		A1D2F94C1D7E62EA002E9BBD /* IFNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFNewsCell.swift; sourceTree = "<group>"; };
+		A1D2F94E1D7E6B90002E9BBD /* ControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
+		A1D2F9501D7EA775002E9BBD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFStartVideoViewController.swift; sourceTree = "<group>"; };
 		A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFMainViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */,
+				A1D2F94E1D7E6B90002E9BBD /* ControllerExtension.swift */,
+				A1D2F9501D7EA775002E9BBD /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -113,6 +123,22 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		A1D2F9481D7E6264002E9BBD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2F94C1D7E62EA002E9BBD /* IFNewsCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A1D2F9491D7E629A002E9BBD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2F94A1D7E62CD002E9BBD /* IFBaseTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		A1EBBE551D755B880017FBEC /* OpenLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +152,8 @@
 			children = (
 				A1EDE29A1D77C90D00F0FBA0 /* Model */,
 				A1EBBE591D755C100017FBEC /* Controllers */,
+				A1D2F9481D7E6264002E9BBD /* Cell */,
+				A1D2F9491D7E629A002E9BBD /* Base */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -354,18 +382,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1BCE2561D7676FA00878D8F /* NSDateExtension.swift in Sources */,
+				A1D2F94B1D7E62CD002E9BBD /* IFBaseTableViewCell.swift in Sources */,
 				A1C224461D7D16A100665206 /* IFNewsModel.m in Sources */,
 				A1EBBE611D75649C0017FBEC /* IFNewsViewController.swift in Sources */,
 				A1EBBE5C1D755C2E0017FBEC /* IFStartVideoViewController.swift in Sources */,
 				A1EBBE651D7564DD0017FBEC /* IFPlayViewController.swift in Sources */,
 				A1EBBE571D755B920017FBEC /* CAPSPageMenu.swift in Sources */,
+				A1D2F94D1D7E62EA002E9BBD /* IFNewsCell.swift in Sources */,
 				A1F568331D741D230045D082 /* AppDelegate.swift in Sources */,
 				A1F1718E1D7D1F99007EC894 /* IFAuthorInfoModel.m in Sources */,
 				A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */,
 				A1EBBE631D7564AF0017FBEC /* IFHomePageViewController.swift in Sources */,
 				A1EBBE671D7565030017FBEC /* IFAppSoViewController.swift in Sources */,
 				A1EBBE6C1D7567AC0017FBEC /* Global.swift in Sources */,
+				A1D2F9511D7EA775002E9BBD /* StringExtension.swift in Sources */,
 				A1EBBE701D75919F0017FBEC /* RequestAPI.swift in Sources */,
+				A1D2F94F1D7E6B90002E9BBD /* ControllerExtension.swift in Sources */,
 				A1EBBE691D7565180017FBEC /* IFStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

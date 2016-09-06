@@ -9,8 +9,9 @@
 import UIKit
 import Moya
 
-class IFNewsViewController: UIViewController {
+class IFNewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     var dataArray = [IFNewsModel]()
     
     override func viewDidLoad() {
@@ -18,9 +19,15 @@ class IFNewsViewController: UIViewController {
 
         self.view.backgroundColor = UIColor.blueColor()
         
+        getData()
+    }
+    
+    //MARK: ---Request
+    func getData() {
+        
         let provider = MoyaProvider<RequestAPI>()
         provider.request(RequestAPI.news_latest(1)) { (result) in
-
+            
             switch result {
             case let .Success(response):
                 
@@ -31,7 +38,7 @@ class IFNewsViewController: UIViewController {
                     self.dataArray.appendContentsOf(jsonDataArray)
                     
                     if self.dataArray.count > 0 {
-                    
+                        self.tableView.reloadData()
                     } else {
                         print("没有数据了")
                     }
@@ -43,17 +50,30 @@ class IFNewsViewController: UIViewController {
                 
             case let .Failure(error):
                 print(error)
-                
-//            case let .Success(response):
-                
-//                let json = try response.mapJSON() as? Dictionary<String, AnyObject>
-//                
-//            case .Failure(error):
-//                print(error)
             }
         }
-        
+
     }
+    
+    //MARK: ---Table view dataSource & delegate
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let newsCell = tableView.dequeueReusableCellWithIdentifier("IFNewsCell", forIndexPath: indexPath) as! IFNewsCell
+        newsCell.setInfo(self.dataArray[indexPath.row])
+        return newsCell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 130
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

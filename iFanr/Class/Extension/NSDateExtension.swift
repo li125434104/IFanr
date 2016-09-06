@@ -69,7 +69,7 @@ extension NSDate {
     /**
      计算多久之前
      
-     - parameter dateString: 传入的数据
+     - parameter dateString: 传入的数据格式：2016-09-06 16:11:24
      
      - returns: String
      */

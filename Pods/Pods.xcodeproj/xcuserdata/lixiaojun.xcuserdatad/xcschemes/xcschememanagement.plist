@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EXTView-EXTView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EXTView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Moya.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>49CA2FCB784B15D0556015BBF8AE1CD0</key>
+		<key>16D8E5C5B32A4F4249F47C6CBB5D1782</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>531B1C277B8F5025CA9734FBCE63BCFB</key>
+		<key>262A0EBFEB93C8CF8026D2FBED546096</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>912BEE5269643D37AF34109E41EBFAAE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D58CAD74411F3EA5D73A48FFB3DC29A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA0551D34854DF0368D34455D1D13DC5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
