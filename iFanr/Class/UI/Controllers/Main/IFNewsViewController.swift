@@ -12,14 +12,29 @@ import Moya
 class IFNewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    
     var dataArray = [IFNewsModel]()
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+//        configUI()
+//        self.edgesForExtendedLayout = .None
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
+        getData()
+    }
+    
+    //MARK: ---ConfigUI
 
+    func configUI() {
         self.view.backgroundColor = UIColor.blueColor()
         
-        getData()
+        let headerView: IFTableHeaderView = self.loadNib("IFTableHeaderView") as! IFTableHeaderView
+        headerView.setHeader(IFTableHeaderModelArray.first!)
+        self.tableView.tableHeaderView = headerView
     }
     
     //MARK: ---Request
@@ -74,6 +89,13 @@ class IFNewsViewController: UIViewController, UITableViewDataSource, UITableView
         return 130
     }
     
+//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 0.1
+//    }
+//    
+//    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 0
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

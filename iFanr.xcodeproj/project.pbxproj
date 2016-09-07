@@ -13,6 +13,9 @@
 		A1D2F94D1D7E62EA002E9BBD /* IFNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F94C1D7E62EA002E9BBD /* IFNewsCell.swift */; };
 		A1D2F94F1D7E6B90002E9BBD /* ControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F94E1D7E6B90002E9BBD /* ControllerExtension.swift */; };
 		A1D2F9511D7EA775002E9BBD /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F9501D7EA775002E9BBD /* StringExtension.swift */; };
+		A1D2F9551D7FE99A002E9BBD /* IFTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F9541D7FE99A002E9BBD /* IFTableHeaderView.swift */; };
+		A1D2F9571D7FE9BE002E9BBD /* IFTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1D2F9561D7FE9BE002E9BBD /* IFTableHeaderView.xib */; };
+		A1D2F95A1D7FF16C002E9BBD /* IFTableHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F9591D7FF16C002E9BBD /* IFTableHeaderModel.swift */; };
 		A1EBBE571D755B920017FBEC /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */; };
 		A1EBBE5C1D755C2E0017FBEC /* IFStartVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */; };
 		A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */; };
@@ -42,6 +45,9 @@
 		A1D2F94C1D7E62EA002E9BBD /* IFNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFNewsCell.swift; sourceTree = "<group>"; };
 		A1D2F94E1D7E6B90002E9BBD /* ControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerExtension.swift; sourceTree = "<group>"; };
 		A1D2F9501D7EA775002E9BBD /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		A1D2F9541D7FE99A002E9BBD /* IFTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFTableHeaderView.swift; sourceTree = "<group>"; };
+		A1D2F9561D7FE9BE002E9BBD /* IFTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IFTableHeaderView.xib; sourceTree = "<group>"; };
+		A1D2F9591D7FF16C002E9BBD /* IFTableHeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFTableHeaderModel.swift; sourceTree = "<group>"; };
 		A1EBBE561D755B920017FBEC /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
 		A1EBBE5B1D755C2E0017FBEC /* IFStartVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFStartVideoViewController.swift; sourceTree = "<group>"; };
 		A1EBBE5E1D755F310017FBEC /* IFMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFMainViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C224431D7D167600665206 /* News */,
+				A1D2F9581D7FF159002E9BBD /* HeaderView */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -139,6 +146,31 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A1D2F9521D7FE96A002E9BBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2F9531D7FE97F002E9BBD /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1D2F9531D7FE97F002E9BBD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2F9541D7FE99A002E9BBD /* IFTableHeaderView.swift */,
+				A1D2F9561D7FE9BE002E9BBD /* IFTableHeaderView.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A1D2F9581D7FF159002E9BBD /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				A1D2F9591D7FF16C002E9BBD /* IFTableHeaderModel.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		A1EBBE551D755B880017FBEC /* OpenLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +185,7 @@
 				A1EDE29A1D77C90D00F0FBA0 /* Model */,
 				A1EBBE591D755C100017FBEC /* Controllers */,
 				A1D2F9481D7E6264002E9BBD /* Cell */,
+				A1D2F9521D7FE96A002E9BBD /* View */,
 				A1D2F9491D7E629A002E9BBD /* Base */,
 			);
 			path = UI;
@@ -320,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1F568461D741F650045D082 /* ifanrVideo.mp4 in Resources */,
+				A1D2F9571D7FE9BE002E9BBD /* IFTableHeaderView.xib in Resources */,
 				A1F5683D1D741D240045D082 /* LaunchScreen.storyboard in Resources */,
 				A1F5683A1D741D240045D082 /* Assets.xcassets in Resources */,
 				A1F568381D741D240045D082 /* Main.storyboard in Resources */,
@@ -389,6 +423,7 @@
 				A1EBBE651D7564DD0017FBEC /* IFPlayViewController.swift in Sources */,
 				A1EBBE571D755B920017FBEC /* CAPSPageMenu.swift in Sources */,
 				A1D2F94D1D7E62EA002E9BBD /* IFNewsCell.swift in Sources */,
+				A1D2F95A1D7FF16C002E9BBD /* IFTableHeaderModel.swift in Sources */,
 				A1F568331D741D230045D082 /* AppDelegate.swift in Sources */,
 				A1F1718E1D7D1F99007EC894 /* IFAuthorInfoModel.m in Sources */,
 				A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */,
@@ -398,6 +433,7 @@
 				A1D2F9511D7EA775002E9BBD /* StringExtension.swift in Sources */,
 				A1EBBE701D75919F0017FBEC /* RequestAPI.swift in Sources */,
 				A1D2F94F1D7E6B90002E9BBD /* ControllerExtension.swift in Sources */,
+				A1D2F9551D7FE99A002E9BBD /* IFTableHeaderView.swift in Sources */,
 				A1EBBE691D7565180017FBEC /* IFStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

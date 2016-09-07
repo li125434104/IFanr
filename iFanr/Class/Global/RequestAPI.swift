@@ -14,6 +14,7 @@ let baseUrlString = "https://www.ifanr.com/api/v3.0/"
 
 public enum RequestAPI {
     case news_latest(Int)
+    case playingZhi_latest(Int)
 }
 
 extension RequestAPI: TargetType {
@@ -28,9 +29,15 @@ extension RequestAPI: TargetType {
     }
     
     private var sign: String {
-        return "be072a0fc0b7020836bae8777f2fbeca"
+        switch self {
+        case .news_latest(_):
+            return "be072a0fc0b7020836bae8777f2fbeca"
+        case .playingZhi_latest(_):
+            return "6e1a1b825a30456e4c68ac0a6e0a2aa7"
+        }
     }
     
+    //https://www.ifanr.com/api/v3.0/?action=ifr_m_latest&appkey=sg5673g77yk72455af4sd55ea&excerpt_length=80&page=1&post_type=coolbuy&posts_per_page=12&sign=6e1a1b825a30456e4c68ac0a6e0a2aa7&timestamp=1467295944
     /// 当前时间的时间戳
     private var timestamp: String {
         return NSDate.getCurrentTimeStamp()
@@ -40,7 +47,10 @@ extension RequestAPI: TargetType {
         switch self {
         case .news_latest(_):
             return "buzz"
+        case .playingZhi_latest(_):
+            return "coolbuy"
         }
+        
     }
     
     private var action: String {
@@ -67,9 +77,9 @@ extension RequestAPI: TargetType {
     public var parameters: [String: AnyObject]? {
         switch self {
         case let .news_latest(page):
-            let params: [String: AnyObject] = ["action": action, "appKey": appKey, "excerpt_length": excerpt_length, "sign": sign, "timestamp": timestamp, "page": page, "posts_per_page": posts_per_page, "post_type": post_type]
-            getUrlString(baseUrlString, params: params)
-            return params
+            return commonParams(page)
+        case let .playingZhi_latest(page):
+            return commonParams(page)
         }
     }
     
@@ -82,7 +92,7 @@ extension RequestAPI: TargetType {
     }
     
     
-    
+    //MARK: ---Private
     /**
      打印请求的URL
      
@@ -106,4 +116,11 @@ extension RequestAPI: TargetType {
         
         print("请求的URL是：\(baseUrlString + str)")
     }
+    
+    func commonParams(page: Int) -> [String: AnyObject]? {
+        let params: [String: AnyObject] = ["action": action, "appKey": appKey, "excerpt_length": excerpt_length, "sign": sign, "timestamp": timestamp, "page": page, "posts_per_page": posts_per_page, "post_type": post_type]
+        getUrlString(baseUrlString, params: params)
+        return params
+    }
+    
 }
