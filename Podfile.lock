@@ -7,21 +7,33 @@ PODS:
     - Alamofire (~> 3.0)
     - Result (~> 2.0)
   - Result (2.1.3)
+  - YYCache (1.0.3)
+  - YYImage (1.0.3):
+    - YYImage/Core (= 1.0.3)
+  - YYImage/Core (1.0.3)
   - YYModel (1.0.4)
+  - YYWebImage (1.0.4):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - Alamofire
   - EXTView
   - Moya
+  - YYImage
   - YYModel
+  - YYWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 6aa33201d20d069e1598891cf928883ff1888c7a
   EXTView: db5ded8520d2023cadb1b9225fb1ad9406064f04
   Moya: f004b82418fb8165ee1fc9f86190db4b3611fda9
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  YYCache: 282f35b5b0990833d0b7a06d864a87141a021da2
+  YYImage: 362f44ffba1fc498f2152060f3bb54ed84600981
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYWebImage: 0431ed108e104527669b86f75efd58958425cca2
 
-PODFILE CHECKSUM: f7ba7b07fd40f566147ac624004cf0d9ed2c156c
+PODFILE CHECKSUM: fdfe99720e797053fad8b5c09e2aa9d5f5d0fc2e
 
 COCOAPODS: 1.0.1

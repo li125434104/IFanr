@@ -38,7 +38,7 @@ class IFMainViewController: UIViewController {
         vc2.title = "首页"
         controllerArray.append(vc2)
 
-        let vc3 = IFPlayViewController()
+        let vc3 = self.loadVCFromSB("IFPlayViewController")
         vc3.title = "玩物志"
         controllerArray.append(vc3)
         

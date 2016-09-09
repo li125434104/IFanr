@@ -6,5 +6,7 @@ target 'iFanr' do
 pod 'Alamofire'
 pod 'Moya'
 pod 'YYModel'
+pod 'YYImage'
+pod 'YYWebImage'
 pod 'EXTView'
 end

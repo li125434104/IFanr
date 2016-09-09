@@ -17,8 +17,6 @@ class IFNewsViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//        configUI()
-//        self.edgesForExtendedLayout = .None
     }
     
     override func viewDidLoad() {
@@ -27,17 +25,18 @@ class IFNewsViewController: UIViewController, UITableViewDataSource, UITableView
         getData()
     }
     
+    
     //MARK: ---ConfigUI
 
     func configUI() {
-        self.view.backgroundColor = UIColor.blueColor()
-        
         let headerView: IFTableHeaderView = self.loadNib("IFTableHeaderView") as! IFTableHeaderView
         headerView.setHeader(IFTableHeaderModelArray.first!)
         self.tableView.tableHeaderView = headerView
     }
     
+    
     //MARK: ---Request
+    
     func getData() {
         
         let provider = MoyaProvider<RequestAPI>()

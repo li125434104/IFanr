@@ -14,6 +14,14 @@ class IFHomePageViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.grayColor()
+        
+        let image: UIImageView = UIImageView.init(frame: CGRectMake(100, 100, 200, 100))
+        self.view.addSubview(image)
+        image.backgroundColor = UIColor.redColor()
+        
+        image.yy_setImageWithURL(NSURL(string: "http://ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2016/08/IMG_0868.jpg"), placeholder: UIImage(named: "place_holder_image"), options: [.SetImageWithFadeAnimation, .ProgressiveBlur], completion: nil)
+
+        
     }
 
     override func didReceiveMemoryWarning() {

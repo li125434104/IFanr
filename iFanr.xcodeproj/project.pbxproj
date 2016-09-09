@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A199BEDF1D80173B00167FCD /* IFPlayZhiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199BEDE1D80173B00167FCD /* IFPlayZhiCell.swift */; };
 		A1BCE2561D7676FA00878D8F /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */; };
 		A1C224461D7D16A100665206 /* IFNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A1C224451D7D16A100665206 /* IFNewsModel.m */; };
 		A1D2F94B1D7E62CD002E9BBD /* IFBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2F94A1D7E62CD002E9BBD /* IFBaseTableViewCell.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		210ED941185AC6DD9215EAC5 /* Pods-iFanr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFanr.release.xcconfig"; path = "Pods/Target Support Files/Pods-iFanr/Pods-iFanr.release.xcconfig"; sourceTree = "<group>"; };
 		485E20FE760E707CA96D4C2C /* Pods_iFanr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFanr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A199BEDE1D80173B00167FCD /* IFPlayZhiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFPlayZhiCell.swift; sourceTree = "<group>"; };
 		A1BCE2551D7676FA00878D8F /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		A1C224441D7D16A100665206 /* IFNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFNewsModel.h; sourceTree = "<group>"; };
 		A1C224451D7D16A100665206 /* IFNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFNewsModel.m; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				A1D2F94C1D7E62EA002E9BBD /* IFNewsCell.swift */,
+				A199BEDE1D80173B00167FCD /* IFPlayZhiCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				A1EBBE5F1D755F310017FBEC /* IFMainViewController.swift in Sources */,
 				A1EBBE631D7564AF0017FBEC /* IFHomePageViewController.swift in Sources */,
 				A1EBBE671D7565030017FBEC /* IFAppSoViewController.swift in Sources */,
+				A199BEDF1D80173B00167FCD /* IFPlayZhiCell.swift in Sources */,
 				A1EBBE6C1D7567AC0017FBEC /* Global.swift in Sources */,
 				A1D2F9511D7EA775002E9BBD /* StringExtension.swift in Sources */,
 				A1EBBE701D75919F0017FBEC /* RequestAPI.swift in Sources */,
