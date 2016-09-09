@@ -80,7 +80,7 @@ class IFPlayViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 290
+        return IFPlayZhiCell.getHeigthCell(self.dataArray[indexPath.row].title!)
     }
 
 

@@ -19,7 +19,7 @@ class IFHomePageViewController: UIViewController {
         self.view.addSubview(image)
         image.backgroundColor = UIColor.redColor()
         
-        image.yy_setImageWithURL(NSURL(string: "http://ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2016/08/IMG_0868.jpg"), placeholder: UIImage(named: "place_holder_image"), options: [.SetImageWithFadeAnimation, .ProgressiveBlur], completion: nil)
+        image.yy_setImageWithURL(NSURL(string: "http://img.hb.aicdn.com/a102f8b14e07c38f81d4eb39c1abaf372b7f26cd34c43-xD7OQm_fw320"), placeholder: UIImage(named: "place_holder_image"), options: [.SetImageWithFadeAnimation, .ProgressiveBlur], completion: nil)
 
         
     }

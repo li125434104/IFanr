@@ -15,7 +15,11 @@ let baseUrlString = "https://www.ifanr.com/api/v3.0/"
 public enum RequestAPI {
     case news_latest(Int)
     case playingZhi_latest(Int)
+    case appSo_latest(Int)
 }
+
+//玩物志:https://www.ifanr.com/api/v3.0/?action=ifr_m_latest&appkey=sg5673g77yk72455af4sd55ea&excerpt_length=80&page=1&post_type=coolbuy&posts_per_page=12&sign=6e1a1b825a30456e4c68ac0a6e0a2aa7&timestamp=1467295944
+//AppSo:https://www.ifanr.com/api/v3.0/?action=ifr_m_latest&appkey=sg5673g77yk72455af4sd55ea&excerpt_length=80&page=2&post_type=app&posts_per_page=12&sign=52eb3928dc47f57a26b00932226eff22&timestamp=1467295827
 
 extension RequestAPI: TargetType {
     //MARK: ---------------------------基本默认要传入的参数 --------------------------
@@ -34,10 +38,11 @@ extension RequestAPI: TargetType {
             return "be072a0fc0b7020836bae8777f2fbeca"
         case .playingZhi_latest(_):
             return "6e1a1b825a30456e4c68ac0a6e0a2aa7"
+        case .appSo_latest(_):
+            return "52eb3928dc47f57a26b00932226eff22"
         }
     }
     
-    //https://www.ifanr.com/api/v3.0/?action=ifr_m_latest&appkey=sg5673g77yk72455af4sd55ea&excerpt_length=80&page=1&post_type=coolbuy&posts_per_page=12&sign=6e1a1b825a30456e4c68ac0a6e0a2aa7&timestamp=1467295944
     /// 当前时间的时间戳
     private var timestamp: String {
         return NSDate.getCurrentTimeStamp()
@@ -49,6 +54,8 @@ extension RequestAPI: TargetType {
             return "buzz"
         case .playingZhi_latest(_):
             return "coolbuy"
+        case .appSo_latest(_):
+            return "app"
         }
         
     }
@@ -79,6 +86,8 @@ extension RequestAPI: TargetType {
         case let .news_latest(page):
             return commonParams(page)
         case let .playingZhi_latest(page):
+            return commonParams(page)
+        case let .appSo_latest(page):
             return commonParams(page)
         }
     }

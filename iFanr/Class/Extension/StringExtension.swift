@@ -71,6 +71,22 @@ extension String {
         return attributedString
     }
     
+    func getDynamicLabelHeight(labelFont: CGFloat, width: CGFloat) -> CGFloat {
+        let size = CGSizeMake(width, CGFloat.max)
+        let paragphStyle = NSMutableParagraphStyle()
+        paragphStyle.lineSpacing = 5.0
+        paragphStyle.firstLineHeadIndent = 0.0
+        paragphStyle.hyphenationFactor = 0.0
+        paragphStyle.paragraphSpacingBefore = 0.0
+        
+        let attrs = [NSFontAttributeName: UIFont.systemFontOfSize(labelFont), NSParagraphStyleAttributeName: paragphStyle] as [String: AnyObject]
+        
+        let labelRect: CGRect = self.boundingRectWithSize(size, options: .UsesLineFragmentOrigin, attributes: attrs, context: nil)
+        
+        return labelRect.height
+    }
+    
+    
 //    /**
 //     判断是否包含String
 //     

@@ -7,14 +7,52 @@
 //
 
 import UIKit
+import Moya
 
 class IFAppSoViewController: UIViewController {
+    
+    var dataArray = [IFNewsModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.redColor()
+        getData()
     }
+    
+    
+    //MARK: ---Request
+    func getData() {
+        
+        let provider = MoyaProvider<RequestAPI>()
+        provider.request(RequestAPI.appSo_latest(1)) { (result) in
+            
+            switch result {
+            case let .Success(response):
+                
+                do {
+                    let jsonDic = try response.mapJSON()
+                    print(jsonDic)
+                    let jsonDataArray = IFNewsModel.modelWithNewsRequest(jsonDic as! [NSObject : AnyObject]) as! [IFNewsModel]
+                    self.dataArray.appendContentsOf(jsonDataArray)
+                    
+                    if self.dataArray.count > 0 {
+//                        self.tableView.reloadData()
+                    } else {
+                        print("没有数据了")
+                    }
+                    
+                    print("NewsDataArray:\(self.dataArray[0].ID)")
+                } catch {
+                    print("出现异常")
+                }
+                
+            case let .Failure(error):
+                print(error)
+            }
+        }
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

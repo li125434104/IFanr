@@ -20,17 +20,17 @@ class IFPlayZhiCell: IFBaseTableViewCell {
     
     func setInfo(model: IFNewsModel) {
         
-        self.logoImageView.yy_setImageWithURL(NSURL(string: "http://ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2016/08/IMG_0868.jpg"), placeholder: UIImage(named: "place_holder_image"), options: [.SetImageWithFadeAnimation, .ProgressiveBlur], completion: nil)
-        
-//        self.logoImageView.yy_setImageWithURL(NSURL(string: "http://ifanr-cdn.b0.upaiyun.com/wp-content/uploads/2016/08/IMG_0868.jpg"), placeholder: UIImage(named: "place_holder_image"))
-        
+        self.logoImageView.yy_setImageWithURL(NSURL(string: model.image!), placeholder: UIImage(named: "place_holder_image"), options: [.SetImageWithFadeAnimation, .ProgressiveBlur], completion: nil)
         self.timeLabel.text = NSDate.getCommonExpressionOfDate(model.pubDate!)
         self.zanCountLabel.text = model.like
         self.titleLabel.text = model.title
         self.titleLabel.attributedText = self.titleLabel.text!.getAttributedString(5.0)
-        
         self.contentLabel.text = model.excerpt
         self.contentLabel.attributedText = self.contentLabel.text?.getAttributedString(5.0)
+    }
+    
+    class func getHeigthCell(title: String) -> CGFloat {
+        return title.getDynamicLabelHeight(16.0, width: kScreenWidth - 30) + 275
     }
 
 }
